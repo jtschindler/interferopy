@@ -457,7 +457,8 @@ class Cube:
 		:return: value or (value, error)
 		"""
 
-		spec, err, _ = self.spectrum(ra=ra, dec=dec, radius=0, freq=freq, channel=channel, calc_error=calc_error)
+		spec, err, _, _ = self.spectrum(ra=ra, dec=dec, radius=0, freq=freq,
+									  channel=channel, calc_error=calc_error)
 		if calc_error:
 			return spec, err
 		else:
@@ -477,7 +478,8 @@ class Cube:
 		:return: value or (value, error)
 		"""
 
-		flux, err, _ = self.spectrum(ra=ra, dec=dec, radius=radius, freq=freq, channel=channel, calc_error=calc_error)
+		flux, err, _, _ = self.spectrum(ra=ra, dec=dec, radius=radius,
+									  freq=freq, channel=channel, calc_error=calc_error)
 		if calc_error:
 			return flux, err
 		else:
